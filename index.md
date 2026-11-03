@@ -7,6 +7,6 @@ author_profile: true
 ---
 
 Below is a showcase of my projects ranging from 2D, 3D, multiplayer, physics-driven systems to custom Unity Editor tools:
-- Project 1
+- [Snowy Brawl — 2D Physics Multiplayer](/projects/snowy-brawl/)
 - Project 2
 - Project 3
