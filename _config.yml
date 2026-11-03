@@ -60,20 +60,20 @@ plugins:
 author:
   name   : "Nguyen Phuc Nguyen"
   avatar : "/assets/images/PROFILE PHOTO.jpg"
-  bio    : "My awesome biography constrained to a sentence or two goes here."
+  bio    : "I’m an Electrical and Electronic Engineering undergraduate and game developer with 3+ years of experience building games using Unity and C#."
   links:
-    - label: "Website"
-      icon: "fas fa-fw fa-link"
-      url: "https://"
-    - label: "Twitter"
-      icon: "fab fa-fw fa-twitter-square"
-      url: "https://twitter.com/"
+  #  - label: "Website"
+  #    icon: "fas fa-fw fa-link"
+  #    url: "https://"
+  #   - label: "Twitter"
+  #     icon: "fab fa-fw fa-twitter-square"
+  #    url: "https://twitter.com/"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/"
-    - label: "Instagram"
-      icon: "fab fa-fw fa-instagram"
-      url: "https://instagram.com/"
+  #  - label: "Instagram"
+  #   icon: "fab fa-fw fa-instagram"
+  #    url: "https://instagram.com/"
 
 footer:
   links:
