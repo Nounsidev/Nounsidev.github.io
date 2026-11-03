@@ -5,3 +5,8 @@
 layout: home
 author_profile: true
 ---
+
+Below is a showcase of my projects ranging from 2D, 3D, multiplayer, physics-driven systems to custom Unity Editor tools:
+- Project 1
+- Project 2
+- Project 3
