@@ -19,7 +19,7 @@ A fast-paced 2D multiplayer ragdoll physics game using Netcode for Gameobjects a
   <source src="/assets/images/snowy_brawl_preview.mp4" type="video/mp4">
 </video>
 
-###  [3. Unity Editor Tools]
+###  [3. Unity Editor Tools](/projects/editor-tools/)
 <video autoplay loop muted playsinline style="max-width: 100%; border-radius: 6px;">
   <source src="/assets/images/snowy_brawl_preview.mp4" type="video/mp4">
 </video>
