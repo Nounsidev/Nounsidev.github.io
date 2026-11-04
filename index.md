@@ -12,5 +12,9 @@ Below is a showcase of my projects ranging from 2D, 3D, multiplayer, physics-dri
   <source src="/assets/images/snowy_brawl_preview.mp4" type="video/mp4">
 </video>
 A fast-paced 2D multiplayer brawl game featuring custom networked ragdoll physics and zero-allocation buffer pooling to maintain 60 FPS across multi-client sessions.
-- Project 2
-- Project 3
+
+
+### 2. [3D Vampire Survivor](/projects/star-light/)
+<video autoplay loop muted playsinline style="max-width: 100%; border-radius: 6px;">
+  <source src="/assets/images/snowy_brawl_preview.mp4" type="video/mp4">
+</video>
