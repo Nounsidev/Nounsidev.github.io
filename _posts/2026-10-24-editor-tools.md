@@ -18,8 +18,10 @@ All tools list below are builts with Unity Editor library.
 This was built for my 3D vampire Survivors like project as meshes deforming is computationally expensive for 1000+ meshes. Animation can be create and import from software like Blender, using 
 default Unity's animator, with this you can select the frame rate, bakes meshes and store them in a separated scriptable object for each animations. From a simple script you can loop through this animation for 
 thousands of models without having to worry about performance.   
-  
-* **Automatic Enum Builder:**
+
+---
+ 
+* **Automatic Enum Builder:**  
 Managing 200+ audio clips using string lookup or dragging individual clip each time you want to use is time-consuming and prone to typing error. Instead this tool will help converts your audio clip names into a enum that you can call everywhere in your codebase.
 ```csharp
 private static string GenerateEnumList(List<SerializedObject> serializedObjects, string listPropertyName, string enumType)
