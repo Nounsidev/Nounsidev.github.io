@@ -13,14 +13,32 @@ Fast-paced 2D multiplayer ragdoll physics game using **Netcode for Gameobjects**
 to 4 players per section with customizable teams, weapons and gamemodes
   
 Role: Solo Developer  
-Tech Stack: Unity 6, C#, Netcode for GameObjects, Unity Gaming Services, Unity Ads  
+Tech Stack: Unity 6, C#, Netcode for GameObjects, Unity Gaming Services, Unity Ads, Google Play Services
 Target Platform: Mobile  
 Links: [Google Play Store](https://play.google.com/store/apps/details?id=com.NounsiDev.Snowy&pcampaignid=web_share)
 
 ## 2. Key Technical Highlights
 * **Networking:**
+
+---
+
 * **Cloud Saving:**
+
+---
+
+
 * **Google Play Services:**
+<img src="/assets/images/Google-Play-Snowy.png" alt="Description of the image" style="max-width: 100%; border-radius: 6px;">
+This game has been undergone internal testing, closed testing and finally launching on Google Play store since Dec 2025. Which also means multiple Google Play API including Integrity, Ads, Play Services, Analytics are implemented in the game.
+
+---
+
 * **Object Pooling:**
+
+---
+
 * **Flyweight Design Pattern:**
+
+---
+
 * **Customizable Controls:**
