@@ -21,8 +21,11 @@ thousands of models without having to worry about performance.
 
 ---
  
-* **Automatic Enum Builder:**  
-Managing 200+ audio clips using string lookup or dragging individual clip each time you want to use is time-consuming and prone to typing error. Instead this tool will help converts your audio clip names into a enum that you can call everywhere in your codebase.
+* **Automatic Enum Builder:**
+<div style="text-align: left; margin: 10px 0;">
+  Managing 200+ audio clips using string lookup or dragging individual clip each time you want to use is time-consuming and prone to typing error. Instead this tool will help converts your audio clip names into a enum that you can call everywhere in your codebase.
+</div>
+
 ```csharp
 private static string GenerateEnumList(List<SerializedObject> serializedObjects, string listPropertyName, string enumType)
 {
