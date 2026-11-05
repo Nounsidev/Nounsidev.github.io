@@ -9,7 +9,8 @@ layout: single
 Brief 2-3 sentence overview of Snowy Brawl...
 
 #### Gameplay & Physics Demo
-<video src="/assets/videos/Star-light-preview.mp4" controls="controls" style="max-width: 100%; width: 100%;">
+<video autoplay loop muted playsinline style="max-width: 100%; border-radius: 6px;">
+  <source src="/assets/images/Star-light-preview.mp4" type="video/mp4">
 </video>
 
 #### Key Technical Highlights
