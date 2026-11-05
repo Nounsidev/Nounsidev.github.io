@@ -97,7 +97,7 @@ private void EnemyHandler()
 ```
 Combining Multithreading and Job System to manage up to 2000+ enemies, 200+ projectiles and 500+ collectibles without dropping frame rate. Seperating threading logic from movement pattern for easier management and scalability.
 
-* **Grid System:**
+* **Grid System:**  
 ```csharp
 public Vector2Int GetCellIndex(Vector3 position)
 {
@@ -151,7 +151,6 @@ public List<Collectible> GetCollectiblesNearbyPlayer(Vector3 playerPosition, int
             }
         }
     }
-
     return nearbyCollectibles;
 }
 ```
