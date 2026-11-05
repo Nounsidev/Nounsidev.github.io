@@ -11,6 +11,7 @@ Below is a showcase of my projects ranging from 2D, 3D, multiplayer, physics-dri
 <video autoplay loop muted playsinline style="max-width: 100%; border-radius: 6px;">
   <source src="/assets/images/snowy_brawl_preview.mp4" type="video/mp4">
 </video>
+**Platform:** [Available on Google Play Store](https://play.google.com/store/apps/details?id=com.NounsiDev.Snowy&pcampaignid=web_share)
 Fast-paced 2D multiplayer ragdoll physics game using **Netcode for Gameobjects** and **Objects Pooling** to maintain 60 FPS across multi-client sessions.
 
 
