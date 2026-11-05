@@ -34,3 +34,5 @@ Physic collider also uses the same mesh as the highest LOD mesh
 <video autoplay loop muted playsinline style="max-width: 100%; border-radius: 6px;">
   <source src="/assets/images/LOD.mp4" type="video/mp4">
 </video>
+Combining Multithreading and Job System to manage up to 2000+ enemies, 200+ projectiles and 500+ collectibles without dropping frame rate. Seperating threading logic from movement pattern for easier management and scalability.
+
