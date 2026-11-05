@@ -22,10 +22,15 @@ Target Platform: PC
 </video>
 Generating procedural map using overlap noise map, height map and fall off map, then using multithread to help calculate meshes vertices and trigs, splitting into
 different chunks before drawing the final terrain meshes on the main thread.  
-
+  
 * **Level of Details:**
 <video autoplay loop muted playsinline style="max-width: 100%; border-radius: 6px;">
   <source src="/assets/images/LOD.mp4" type="video/mp4">
 </video>
 Terrain meshes are divided into different chunk, they are then being optimized bases on player position and sight of line. Only the main mesh that the player are on had a physic collider.
-Physic collider also uses the same mesh as the highest LOD mesh 
+Physic collider also uses the same mesh as the highest LOD mesh  
+  
+* **Jobs System:**
+<video autoplay loop muted playsinline style="max-width: 100%; border-radius: 6px;">
+  <source src="/assets/images/LOD.mp4" type="video/mp4">
+</video>
