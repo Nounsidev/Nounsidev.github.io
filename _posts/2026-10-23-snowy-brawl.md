@@ -9,7 +9,7 @@ layout: single
 Brief 2-3 sentence overview of Snowy Brawl...
 
 #### 📹 Gameplay & Physics Demo
-<video src="/assets/videos/snowy_brawl_demo.mp4" controls="controls" style="max-width: 100%; width: 100%;">
+<video src="/assets/videos/snowy_brawl_preview.mp4" controls="controls" style="max-width: 100%; width: 100%;">
 </video>
 
 #### 🛠️ Key Technical Highlights
