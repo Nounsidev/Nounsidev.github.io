@@ -97,3 +97,62 @@ private void EnemyHandler()
 ```
 Combining Multithreading and Job System to manage up to 2000+ enemies, 200+ projectiles and 500+ collectibles without dropping frame rate. Seperating threading logic from movement pattern for easier management and scalability.
 
+* **Grid System:**
+```csharp
+public Vector2Int GetCellIndex(Vector3 position)
+{
+    return new Vector2Int(
+        Mathf.FloorToInt(position.x / xpPoolSO.cellSize),
+        Mathf.FloorToInt(position.z / xpPoolSO.cellSize)
+    );
+}
+
+private Vector3 GetCollectiblePosition(Vector3 position)
+{
+    Ray ray = new Ray(position, Vector3.down);
+    Physics.Raycast(ray, out RaycastHit groundPoint, xpPoolSO.rayCastDistance, gameDataSO.groundLayer);
+    return groundPoint.point + xpPoolSO.gemOffset;
+}
+
+public void RemoveCollectibleFromGrid(Collectible collectible)
+{
+    grid[collectible.cellPosition].Remove(collectible);
+
+    //Sync the flattened parallel job array using dynamic SwapBack
+    int index = activeCollectibleList.IndexOf(collectible);
+    if (index >= 0)
+    {
+        int lastIndex = activeCollectibleList.Count - 1;
+        if (index != lastIndex)
+        {
+            activeCollectibleList[index] = activeCollectibleList[lastIndex];
+        }
+        activeCollectibleList.RemoveAt(lastIndex);
+
+        // Keeps structural native indexing tight without memory gaps
+        transformAccessArray.RemoveAtSwapBack(index);
+    }
+}
+
+public List<Collectible> GetCollectiblesNearbyPlayer(Vector3 playerPosition, int checkCellSurroundPlayerSize)
+{
+    nearbyCollectibles.Clear();
+    playerCell = GetCellIndex(playerPosition);
+
+    for (int y = -checkCellSurroundPlayerSize; y <= checkCellSurroundPlayerSize; y++)
+    {
+        for (int x = -checkCellSurroundPlayerSize; x <= checkCellSurroundPlayerSize; x++)
+        {
+            Vector2Int targetCell = playerCell + new Vector2Int(x, y);
+
+            if (grid.TryGetValue(targetCell, out List<Collectible> gemsInCell))
+            {
+                nearbyCollectibles.AddRange(gemsInCell);
+            }
+        }
+    }
+
+    return nearbyCollectibles;
+}
+```
+As the amount of collectibles in a playthrough can reach well over 500 in number. If we try to check which item the player can collect by looping through them all, it will be a waste of performance since there will be items across the map. Instead all items when spawned are placed on a grid, player only check if they can pick up item around their 2x2 grid. 
