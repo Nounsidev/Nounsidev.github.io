@@ -9,8 +9,10 @@ layout: single
 Brief 2-3 sentence overview of Snowy Brawl...
 
 #### 📹 Gameplay & Physics Demo
-<video src="/assets/videos/snowy_brawl_preview.mp4" controls="controls" style="max-width: 100%; width: 100%;">
+<video autoplay loop muted playsinline style="max-width: 100%; border-radius: 6px;">
+  <source src="/assets/images/snowy_brawl_preview.mp4" type="video/mp4">
 </video>
+
 
 #### 🛠️ Key Technical Highlights
 * **Networked Ragdoll Physics:** Engineered client-server state sync using Netcode for GameObjects...
