@@ -14,9 +14,9 @@ Below is a showcase of my projects ranging from 2D, 3D, multiplayer, physics-dri
 Fast-paced 2D multiplayer ragdoll physics game using **Netcode for Gameobjects** and **Objects Pooling** to maintain 60 FPS across multi-client sessions.
 
 
-###  [2. 3D Vampire Survivors](/projects/star-light/)
+###  [2. 3D Vampire Survivors - Procedual Map Generation](/projects/star-light/)
 <video autoplay loop muted playsinline style="max-width: 100%; border-radius: 6px;">
-  <source src="/assets/images/Star-light.mp4" type="video/mp4">
+  <source src="/assets/images/Star-light-preview.mp4" type="video/mp4">
 </video>
 Rogue-lite game building with Jobs System and Multithreading to support up to 2000 enemies swarm
 
