@@ -20,5 +20,66 @@ default Unity's animator, with this you can select the frame rate, bakes meshes 
 thousands of models without having to worry about performance.
 
 * **Automatic Enum Builder:**
+```csharp
+private static string GenerateEnumList(List<SerializedObject> serializedObjects, string listPropertyName, string enumType)
+{
+    var enumNames = new List<string>();
 
-* **Ragdoll Component Synchronizer:**
+    foreach (var serializedSO in serializedObjects)
+    {
+        SerializedProperty listProperty = serializedSO.FindProperty(listPropertyName);
+
+        if (listProperty == null || !listProperty.isArray)
+        {
+            Debug.LogError("Could not find the 'audioSettings' list property on the SO.");
+            return string.Empty;
+        }
+
+
+        // Iterate through the SerializedProperty list
+        for (int i = 0; i < listProperty.arraySize; i++)
+        {
+            SerializedProperty clipProperty = listProperty.GetArrayElementAtIndex(i);
+            if (clipProperty.objectReferenceValue == null)
+            {
+                Debug.LogWarning($"Skipping list entry at index {i} in '{listPropertyName}' because the AudioClip slot is empty.");
+                continue;
+            }
+
+            // Get the file name from the AudioClip asset reference
+            Object audioClipObject = clipProperty.objectReferenceValue;
+
+            // Get the full path to the asset
+            string assetPath = AssetDatabase.GetAssetPath(audioClipObject);
+
+            // Extract the file name without the extension
+            string fileName = Path.GetFileNameWithoutExtension(assetPath);
+            string safeName = fileName.Replace(" ", "").Replace("-", "");
+
+            if (!enumNames.Contains(safeName))
+            {
+                enumNames.Add(safeName);
+            }
+        }
+    }
+
+    if (enumNames.Count == 0) return string.Empty;
+
+    // Build the C# code content
+    StringBuilder sb = new();
+    sb.AppendLine($"public enum {enumType}");
+    sb.AppendLine("{");
+
+    for (int i = 0; i < enumNames.Count; i++)
+    {
+        // Use the index for hard-coded value assurance
+        sb.AppendLine($"\t{enumNames[i]} = {i},");
+    }
+
+    sb.AppendLine("}");
+
+    //Return the generated enum string
+    return sb.ToString();
+}
+```
+
