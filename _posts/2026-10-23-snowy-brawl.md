@@ -9,7 +9,8 @@ layout: single
 <video autoplay loop muted playsinline style="max-width: 100%; border-radius: 6px;">
   <source src="/assets/images/snowy_brawl_preview.mp4" type="video/mp4">
 </video>
-
+Fast-paced 2D multiplayer ragdoll physics game using **Netcode for Gameobjects** and **Objects Pooling** to maintain 60 FPS across multi-client sessions.  
+  
 Role: Solo Developer  
 Tech Stack: Unity 6, C#, Netcode for GameObjects, Unity Gaming Services, Unity Ads  
 Target Platform: Mobile  
