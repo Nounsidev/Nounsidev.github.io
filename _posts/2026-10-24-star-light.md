@@ -5,13 +5,16 @@ permalink: /projects/star-light/
 layout: single
 ---
 
-## Overview
-Brief 2-3 sentence overview of Snowy Brawl...
-
-#### Gameplay & Physics Demo
+## 1. Overview
 <video autoplay loop muted playsinline style="max-width: 100%; border-radius: 6px;">
   <source src="/assets/images/Star-light-preview.mp4" type="video/mp4">
 </video>
 
-#### Key Technical Highlights
+Role: Solo Developer / Lead Network Programmer / Systems Developer  
+Tech Stack: Unity 6, C#, Job System, Multithreading  
+Target Platform: PC  
+
+#### 2. Gameplay Demo
+
+#### 3. Key Technical Highlights
 * **Networked Ragdoll Physics:** Engineered client-server state sync using Netcode for GameObjects...
