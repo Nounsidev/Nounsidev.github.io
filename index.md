@@ -18,7 +18,7 @@ Fast-paced 2D multiplayer ragdoll physics game using **Netcode for Gameobjects**
 <video autoplay loop muted playsinline style="max-width: 100%; border-radius: 6px;">
   <source src="/assets/images/Star-light-preview.mp4" type="video/mp4">
 </video>
-Rogue-lite game building with Jobs System and Multithreading to support up to 2000 enemies swarm
+Rogue-lite game building with **Jobs System** and **Multithreading** to support up to 2000 enemies swarm with *Procedural Map Generation*
 
 
 ###  [3. Unity Editor Tools](/projects/editor-tools/)
@@ -26,4 +26,4 @@ Rogue-lite game building with Jobs System and Multithreading to support up to 20
   <source src="/assets/images/Mesh-Tool.mp4" type="video/mp4">
 </video>
 
-Custom Unity Editor's tools to speed up and optimizing game developing proccess
+**Custom Unity Editor's Tools** to speed up and optimizing game developing proccess
