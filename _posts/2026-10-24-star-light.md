@@ -31,6 +31,7 @@ Terrain meshes are divided into different chunk, they are then being optimized b
 Physic collider also uses the same mesh as the highest LOD mesh  
   
 * **Jobs System:**
+Combining Multithreading and Job System to manage up to 2000+ enemies, 200+ projectiles and 500+ collectibles without dropping frame rate. Seperating threading logic from movement pattern for easier management and scalability.
 ```csharp
 private void EnemyHandler()
 {
@@ -95,9 +96,10 @@ private void EnemyHandler()
     damageQueue.Dispose();
 }
 ```
-Combining Multithreading and Job System to manage up to 2000+ enemies, 200+ projectiles and 500+ collectibles without dropping frame rate. Seperating threading logic from movement pattern for easier management and scalability.
 
-* **Grid System:**
+
+* **Grid System:**  
+As the amount of collectibles in a section can reach well over 500. If we try to check which item the player can collect by looping through them all, it will be a waste of performance since there will be items across the map. Instead all items when spawned are placed on a grid, player only check if they can pick up item around their 2x2 grid. 
 ```csharp
 public Vector2Int GetCellIndex(Vector3 position)
 {
@@ -154,4 +156,4 @@ public List<Collectible> GetCollectiblesNearbyPlayer(Vector3 playerPosition, int
     return nearbyCollectibles;
 }
 ```
-As the amount of collectibles in a section can reach well over 500. If we try to check which item the player can collect by looping through them all, it will be a waste of performance since there will be items across the map. Instead all items when spawned are placed on a grid, player only check if they can pick up item around their 2x2 grid. 
+
