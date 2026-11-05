@@ -29,7 +29,9 @@ Links: [Google Play Store](https://play.google.com/store/apps/details?id=com.Nou
 
 * **Google Play Services:**
 <img src="/assets/images/Google-Play-Snowy.png" alt="Description of the image" style="max-width: 100%; border-radius: 6px;">
-This game has been undergone internal testing, closed testing and finally launching on Google Play store since Dec 2025. Which also means multiple Google Play API including Integrity, Ads, Play Services, Analytics are implemented in the game.
+<div style="text-align: left; margin: 10px 0;">
+  This game has been undergone internal testing, closed testing and finally launching on Google Play store since Dec 2025. Which also means multiple Google Play API including Integrity, Ads, Play Services, Analytics are implemented in the game.
+</div>
 
 ---
 
