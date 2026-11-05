@@ -1,5 +1,5 @@
 ---
-title: "3D Vampire Survivor"
+title: "3D Vampire Survivor - Procedural Map Generation "
 date: 2026-10-24
 permalink: /projects/star-light/
 layout: single
@@ -9,7 +9,7 @@ layout: single
 Brief 2-3 sentence overview of Snowy Brawl...
 
 #### Gameplay & Physics Demo
-<video src="/assets/videos/snowy_brawl_demo.mp4" controls="controls" style="max-width: 100%; width: 100%;">
+<video src="/assets/videos/Star-light-preview.mp4" controls="controls" style="max-width: 100%; width: 100%;">
 </video>
 
 #### Key Technical Highlights
