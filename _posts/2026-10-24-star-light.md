@@ -153,5 +153,5 @@ public List<Collectible> GetCollectiblesNearbyPlayer(Vector3 playerPosition, int
     }
     return nearbyCollectibles;
 }
-```
+```  
 As the amount of collectibles in a playthrough can reach well over 500 in number. If we try to check which item the player can collect by looping through them all, it will be a waste of performance since there will be items across the map. Instead all items when spawned are placed on a grid, player only check if they can pick up item around their 2x2 grid. 
