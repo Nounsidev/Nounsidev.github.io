@@ -23,7 +23,7 @@ Rogue-lite game building with Jobs System and Multithreading to support up to 20
 
 ###  [3. Unity Editor Tools](/projects/editor-tools/)
 <video autoplay loop muted playsinline style="max-width: 100%; border-radius: 6px;">
-  <source src="/assets/images/snowy_brawl_preview.mp4" type="video/mp4">
+  <source src="/assets/images/Mesh-Tool.mp4" type="video/mp4">
 </video>
 
 Custom Unity Editor's tools to speed up and optimizing game developing proccess
