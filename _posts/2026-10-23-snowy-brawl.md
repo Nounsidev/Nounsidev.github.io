@@ -17,8 +17,10 @@ Tech Stack: Unity 6, C#, Netcode for GameObjects, Unity Gaming Services, Unity A
 Target Platform: Mobile  
 Links: [Google Play Store](https://play.google.com/store/apps/details?id=com.NounsiDev.Snowy&pcampaignid=web_share)
 
-#### 2. Gameplay & Physics Demo
-
-
-#### 3. Key Technical Highlights
-* **Networked Ragdoll Physics:** Engineered client-server state sync using Netcode for GameObjects...
+## 2. Key Technical Highlights
+* **Networking:**
+* **Cloud Saving:**
+* **Google Play Services:**
+* **Object Pooling:**
+* **Flyweight Design Pattern:**
+* **Customizable Controls:**
