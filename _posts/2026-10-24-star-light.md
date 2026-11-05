@@ -11,7 +11,7 @@ layout: single
 </video>
 Rogue-lite game building with **Jobs System** and **Multithreading** to support up to 2000 enemies swarm with *Procedural Map Generation*  
 
-Role: Solo Developer 
+Role: Solo Developer   
 Tech Stack: Unity 6, C#, Job System, Multithreading  
 Target Platform: PC  
 
