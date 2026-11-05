@@ -15,7 +15,7 @@ Role: Solo Developer
 Tech Stack: Unity 6, C#, Job System, Multithreading  
 Target Platform: PC  
 
-#### 2. Key Technical Highlights
+## 2. Key Technical Highlights
 * **Procedural Map Generation:**
 <video autoplay loop muted playsinline style="max-width: 100%; border-radius: 6px;">
   <source src="/assets/images/Map-Generation.mp4" type="video/mp4">
