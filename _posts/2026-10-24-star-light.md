@@ -35,9 +35,10 @@ Physic collider also uses the same mesh as the highest LOD mesh
 ---
 
 * **Jobs System:**
-<div style="text-align: left; margin: 15px 0;">
+<div style="text-align: left; margin: 10px 0;">
   Combining Multithreading and Job System to manage up to 2000+ enemies, 200+ projectiles and 500+ collectibles without dropping frame rate. Seperating threading logic from movement pattern for easier management    and scalability.
 </div>
+
 ```csharp
 private void EnemyHandler()
 {
