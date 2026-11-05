@@ -5,14 +5,18 @@ permalink: /projects/snowy-brawl/
 layout: single
 ---
 
-## 🥊 Overview
-Brief 2-3 sentence overview of Snowy Brawl...
-
-#### 📹 Gameplay & Physics Demo
+## 1.  Overview
 <video autoplay loop muted playsinline style="max-width: 100%; border-radius: 6px;">
   <source src="/assets/images/snowy_brawl_preview.mp4" type="video/mp4">
 </video>
 
+Role: Solo Developer  
+Tech Stack: Unity 6, C#, Netcode for GameObjects, Unity Gaming Services, Unity Ads  
+Target Platform: Mobile  
+Links: 
 
-#### 🛠️ Key Technical Highlights
+#### 2. Gameplay & Physics Demo
+
+
+#### 3. Key Technical Highlights
 * **Networked Ragdoll Physics:** Engineered client-server state sync using Netcode for GameObjects...
