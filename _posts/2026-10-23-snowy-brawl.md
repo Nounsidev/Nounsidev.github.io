@@ -13,7 +13,7 @@ Fast-paced 2D multiplayer ragdoll physics game using **Netcode for Gameobjects**
 to 4 players per section with customizable teams, weapons and gamemodes
   
 Role: Solo Developer  
-Tech Stack: Unity 6, C#, Netcode for GameObjects, Unity Gaming Services, Unity Ads, Google Play Services
+Tech Stack: Unity 6, C#, Netcode for GameObjects, Unity Gaming Services, Unity Ads, Google Play Services  
 Target Platform: Mobile  
 Links: [Google Play Store](https://play.google.com/store/apps/details?id=com.NounsiDev.Snowy&pcampaignid=web_share)
 
