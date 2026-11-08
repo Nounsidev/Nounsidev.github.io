@@ -23,12 +23,15 @@ Links: [Google Play Store](https://play.google.com/store/apps/details?id=com.Nou
   <source src="/assets/images/Lobby.mp4" type="video/mp4">
 </video>
 
+<div style="text-align: left; margin: 10px 0;">
+  Built on **Netcode for GameObjects (NGO)** as the core networking framework, integrated with **Unity Lobby** for seamless matchmaking and a **Relay server** utilizing UDP for low-overhead transport. To combat an average 120ms round-trip time (RTT) and mask network jitter, a hybrid client-side smoothing pipeline implements both interpolation and extrapolation to gracefully handle lag spikes.<br><br> 
+</div>
+
 <video autoplay loop muted playsinline style="max-width: 100%; border-radius: 10px;">
   <source src="/assets/images/Fight Clip.mp4" type="video/mp4">
 </video>
 
 <div style="text-align: left; margin: 10px 0;">
-  Built on **Netcode for GameObjects (NGO)** as the core networking framework, integrated with **Unity Lobby** for seamless matchmaking and a **Relay server** utilizing UDP for low-overhead transport. To combat an average 120ms round-trip time (RTT) and mask network jitter, a hybrid client-side smoothing pipeline implements both interpolation and extrapolation to gracefully handle lag spikes.<br><br> 
   All physics-driven movement utilizes delta synchronization to maintain consistent behavior across varying client frame rates while minimizing bandwidth overhead. Conversely, discrete, one-time gameplay actions are routed via client-to-server RPCs; the authoritative server then broadcasts the response to all connected peers. A deliberate network buffer delay is implemented on these actions to balance responsiveness and mitigate host advantage.<br><br>
    Furthermore, player state replication is optimized by synchronizing only the root transform and four key limb rotation variables; through empirical testing, utilizing **half-precision floats (16-bit)** and change-detection thresholds successfully minimized network payload overhead.
 </div>
