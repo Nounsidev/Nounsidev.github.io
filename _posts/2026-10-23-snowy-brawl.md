@@ -54,7 +54,7 @@ Links: [Google Play Store](https://play.google.com/store/apps/details?id=com.Nou
 ---
 
 * **Flyweight Design Pattern:**
-<img src="/assets/images/Scriptable.png" alt="Description of the image" style="max-width: 100%; border-radius: 6px;">
+<img src="/assets/images/Scriptable Obj.png" alt="Description of the image" style="max-width: 100%; border-radius: 6px;">
 <video autoplay loop muted playsinline style="max-width: 100%; border-radius: 6px;">
   <source src="/assets/images/Book.mp4" type="video/mp4">
 </video>
