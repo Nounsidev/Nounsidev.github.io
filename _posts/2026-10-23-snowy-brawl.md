@@ -34,7 +34,7 @@ Links: [Google Play Store](https://play.google.com/store/apps/details?id=com.Nou
 ---
 
 * **Cloud Saving:**
-<div style="margin-left: 10px; width: calc(100% + 24px);">
+<div style="margin-left: 5px; width: calc(100% + 12px);">
   <img src="/assets/images/Cloud-Save.png" alt="Cloud Saving Dashboard" style="width: 100%; border-radius: 6px;">
 </div>
 <div style="text-align: left; margin: 10px 0;">
