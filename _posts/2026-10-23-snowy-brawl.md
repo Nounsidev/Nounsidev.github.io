@@ -28,7 +28,8 @@ Links: [Google Play Store](https://play.google.com/store/apps/details?id=com.Nou
 </video>
 
 <div style="text-align: left; margin: 10px 0;">
-  This game has been undergone internal testing, closed testing and finally launching on Google Play store since Dec 2025. Which also means multiple Google Play API including Integrity, Ads, Play Services, Analytics are implemented in the game.
+  Built on **Netcode for GameObjects (NGO)** as the core networking framework, integrated with **Unity Lobby** for seamless matchmaking and a **Relay server** utilizing UDP for low-overhead transport. To combat an average 120ms round-trip time (RTT) and mask network jitter, a hybrid client-side smoothing pipeline implements both interpolation and extrapolation to gracefully handle lag spikes. Furthermore, player state replication is optimized by synchronizing only the root transform and four key limb rotation variables; through empirical testing, utilizing **half-precision floats (16-bit)** and change-detection thresholds successfully minimized network payload overhead.  
+  All physics-driven movement utilizes delta synchronization to maintain consistent behavior across varying client frame rates while minimizing bandwidth overhead. Conversely, discrete, one-time gameplay actions are routed via client-to-server RPCs; the authoritative server then broadcasts the response to all connected peers. A deliberate network buffer delay is implemented on these actions to balance responsiveness and mitigate host advantage.
 </div>
 
 ---
@@ -44,9 +45,11 @@ Links: [Google Play Store](https://play.google.com/store/apps/details?id=com.Nou
 ---
 
 * **Google Play Services:**
-<img src="/assets/images/Google-Play-Snowy.png" alt="Description of the image" style="max-width: 100%; border-radius: 10px;">
+<div style="margin-left: 0px; width: 100%;">
+  <img src="/assets/images/Google-Play-Snowy.png" alt="Description of the image" style="max-width: 100%; border-radius: 6px;">
+</div>  
 <div style="text-align: left; margin: 10px 0;">
-  This game has been undergone internal testing, closed testing and finally launching on Google Play store since Dec 2025. Which also means multiple Google Play API including Integrity, Ads, Play Services, Analytics are implemented in the game.
+ Successfully navigated full production lifecycles—spanning internal testing, closed testing, and a public Google Play Store release in December 2025. Integrated a suite of core Google Play APIs, including Play Integrity for security, Google Mobile Ads, Play Games Services, and Analytics to track real-time player telemetry and ensure production stability.
 </div>
 
 ---
@@ -56,12 +59,14 @@ Links: [Google Play Store](https://play.google.com/store/apps/details?id=com.Nou
 ---
 
 * **Flyweight Design Pattern:**
-<img src="/assets/images/Scriptable Obj.png" alt="Description of the image" style="max-width: 100%; border-radius: 10px;">
+<div style="margin-left: 0px; width: 100%;">
+  <img src="/assets/images/Scriptable Obj.png" alt="Description of the image" style="max-width: 100%; border-radius: 6px;">
+</div>  
 <video autoplay loop muted playsinline style="max-width: 100%; border-radius: 6px;">
   <source src="/assets/images/Book.mp4" type="video/mp4">
 </video>
 <div style="text-align: left; margin: 10px 0;">
-  This game has been undergone internal testing, closed testing and finally launching on Google Play store since Dec 2025. Which also means multiple Google Play API including Integrity, Ads, Play Services, Analytics are implemented in the game.
+  Decoupled all character and weapon statistics into dedicated ScriptableObjects, establishing a single source of truth for game data. This modular architecture simplifies balance tweaks in the editor, streamlines data management, and ensures the codebase remains clean and scalable as the project expands.
 </div>
 ---
 
@@ -69,3 +74,7 @@ Links: [Google Play Store](https://play.google.com/store/apps/details?id=com.Nou
 <video autoplay loop muted playsinline style="max-width: 100%; border-radius: 6px;">
   <source src="/assets/images/Customize.mp4" type="video/mp4">
 </video>
+<div style="text-align: left; margin: 10px 0;">
+  Engineered a custom UI preference system empowering players to tailor their layout and settings to individual playstyles. Settings are serialized and stored locally via JSON configuration files, ensuring that multi-device cross-play environments seamlessly adapt to varying hardware resolutions.
+</div>
+
