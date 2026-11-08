@@ -34,7 +34,7 @@ Links: [Google Play Store](https://play.google.com/store/apps/details?id=com.Nou
 ---
 
 * **Cloud Saving:**
-<img src="/assets/images/Cloud-Save.png" alt="Description of the image" style="max-width: 100%; border-radius: 10px;">
+<img src="/assets/images/Cloud-Save.png" alt="Description of the image" style="width: 100%; border-radius: 10px;">
 <div style="text-align: left; margin: 10px 0;">
   Both Authentication and Cloud Saving are using UGS ( Unity Gaming Service) - which also provide lobby, player-matching, relay server. Although all the data is read-only for the owner client, it can be configured to be read-only by other clients to support system like Friends and Clan. 
 </div>
