@@ -19,6 +19,17 @@ Links: [Google Play Store](https://play.google.com/store/apps/details?id=com.Nou
 
 ## 2. Key Technical Highlights
 * **Networking:**
+<video autoplay loop muted playsinline style="max-width: 100%; border-radius: 6px;">
+  <source src="/assets/images/Lobby.mp4" type="video/mp4">
+</video>
+
+<video autoplay loop muted playsinline style="max-width: 100%; border-radius: 6px;">
+  <source src="/assets/images/Fight Clip.mp4" type="video/mp4">
+</video>
+
+<div style="text-align: left; margin: 10px 0;">
+  This game has been undergone internal testing, closed testing and finally launching on Google Play store since Dec 2025. Which also means multiple Google Play API including Integrity, Ads, Play Services, Analytics are implemented in the game.
+</div>
 
 ---
 
@@ -43,7 +54,16 @@ Links: [Google Play Store](https://play.google.com/store/apps/details?id=com.Nou
 ---
 
 * **Flyweight Design Pattern:**
-
+<img src="/assets/images/Scriptable.png" alt="Description of the image" style="max-width: 100%; border-radius: 6px;">
+<video autoplay loop muted playsinline style="max-width: 100%; border-radius: 6px;">
+  <source src="/assets/images/Book.mp4" type="video/mp4">
+</video>
+<div style="text-align: left; margin: 10px 0;">
+  This game has been undergone internal testing, closed testing and finally launching on Google Play store since Dec 2025. Which also means multiple Google Play API including Integrity, Ads, Play Services, Analytics are implemented in the game.
+</div>
 ---
 
 * **Customizable Controls:**
+<video autoplay loop muted playsinline style="max-width: 100%; border-radius: 6px;">
+  <source src="/assets/images/Customize.mp4" type="video/mp4">
+</video>
