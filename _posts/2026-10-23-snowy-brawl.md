@@ -55,10 +55,148 @@ Links: [Google Play Store](https://play.google.com/store/apps/details?id=com.Nou
 <div style="text-align: left; margin: 10px 0;" markdown="1">
  Successfully navigated full production lifecycles—spanning internal testing, closed testing, and a public Google Play Store release in December 2025. Integrated a suite of core Google Play APIs, including Play Integrity for security, Google Mobile Ads, Play Games Services, and Analytics to track real-time player telemetry and ensure production stability.
 </div>
+---
+
+* **Update Manager:**
+<div style="text-align: left; margin: 10px 0;" markdown="1">
+  Engineered a centralized update manager to eliminate performance bottlenecks on memory-constrained mobile devices. By implementing a lightweight <strong>IUpdateObserver</strong> interface (along with <strong>IFixedUpdateObserver</strong> and <strong>ILateUpdateObserver</strong>), scripts register directly to custom tick loops—bypassing Unity's native C# interop overhead for standard <code>Update()</code> calls while enabling control over updating inactive object  or not.
+</div>
+
+```csharp
+public class UpdateManager : MonoBehaviour
+{
+  private static List<IUpdateObserver> updateObservers = new();
+  private static List<IUpdateObserver> pendingUpdateObservers = new();
+  private static int currentUpdateObserverIndex;
+
+   private void Update()
+   {
+       for (currentUpdateObserverIndex = updateObservers.Count - 1; currentUpdateObserverIndex >= 0; currentUpdateObserverIndex--)
+       {
+           updateObservers[currentUpdateObserverIndex].ObservedUpdate();
+       }
+  
+       if (pendingUpdateObservers.Count == 0) return;
+       updateObservers.AddRange(pendingUpdateObservers);
+       pendingUpdateObservers.Clear();
+   }
+
+  public static void RegisterUpdateObserver(IUpdateObserver observer)
+  {      
+      pendingUpdateObservers.Add(observer);
+  }
+  
+  public static bool UnregisterUpdateObserver(IUpdateObserver observer)
+  {
+      bool wasRemove =  updateObservers.Remove(observer);
+      if(wasRemove) currentUpdateObserverIndex--;
+      else wasRemove = pendingUpdateObservers.Remove(observer);
+      return wasRemove;
+  }
+}
+```
 
 ---
 
 * **Object Pooling:**
+<div style="text-align: left; margin: 10px 0;" markdown="1">
+  Architected a custom network object pooling system to eliminate runtime instantiation spikes and optimize client-server synchronization overhead. All network prefabs are pre-spawned under server authority upon initialization; when activated for gameplay, ownership is dynamically transferred to the target client to ensure responsive local control and clean authority management.
+</div>
+
+```csharp
+public class NetworkObjectPooling : NetworkBehaviour
+{
+    HashSet<GameObject> m_Prefabs = new HashSet<GameObject>();
+    Dictionary<GameObject, ObjectPool<NetworkObject>> m_PooledObjects = new Dictionary<GameObject, ObjectPool<NetworkObject>>();
+
+    protected void RegisterPrefabInternal(GameObject prefab, int prewarmCount, int maxCount)
+    {        
+        NetworkObject CreateFunc()
+        {
+            return Instantiate(prefab).GetComponent<NetworkObject>();   
+        }
+
+        void ActionOnGet(NetworkObject networkObject)
+        {
+            networkObject.gameObject.SetActive(true);
+        }
+
+        void ActionOnRelease(NetworkObject networkObject)
+        {
+            networkObject.gameObject.SetActive(false);
+        }
+
+        void ActionOnDestroy(NetworkObject networkObject)
+        {
+            if (IsServer && networkObject!= null && !networkObject.Equals(null)) Destroy(networkObject.gameObject);
+        }
+        m_Prefabs.Add(prefab);
+
+        m_PooledObjects[prefab] = new ObjectPool<NetworkObject>(CreateFunc, ActionOnGet, ActionOnRelease, ActionOnDestroy, defaultCapacity: prewarmCount, maxSize: maxCount);
+        var prewarmNetworkObjects = new List<NetworkObject>();
+        for (var i = 0; i < prewarmCount; i++)
+        {
+            prewarmNetworkObjects.Add(m_PooledObjects[prefab].Get());
+        }
+        foreach (var networkObject in prewarmNetworkObjects)
+        {
+            m_PooledObjects[prefab].Release(networkObject);
+        }
+       NetworkManager.Singleton.PrefabHandler.AddHandler(prefab, new PooledPrefabInstanceHandler(prefab, this));
+    }
+}
+```
+<div style="text-align: left; margin: 10px 0;" markdown="1">
+  Extended Unity's native object pooling architecture to implement a Gradually Object Pool. Rather than pre-allocating a heavy footprint at startup, the pool initializes with a lean baseline and dynamically instantiates additional instances only when required. This balances memory efficiency by preventing early-game bloat while handling systems that scale progressively throughout a session.
+</div>
+
+```csharp
+ public GradualObjectPooling(Func<T> createFunc, Action<T> onActionGet, Action<T> onActionRelease, int capacity) : base(createFunc, onActionGet, onActionRelease, capacity)
+ {
+     OnActionGet = onActionGet;
+     OnActionRelease = onActionRelease;
+     CreateFunc = createFunc;
+     poolCapacity = capacity;
+     poolingList = new List<T>(capacity);
+ }
+
+ public override T Get()
+ {
+     T poolObject;
+     //Reusing the same object if it available in the pool
+     if (freshlyReleashObject != null)
+     {
+         poolObject = freshlyReleashObject;
+         freshlyReleashObject = null;
+     }
+     else if (poolingList.Count == 0 && objectCount <= poolCapacity)
+     {
+         poolObject = CreateFunc();
+         objectCount++;
+     }
+     else
+     {
+         int index = poolingList.Count - 1;
+         poolObject = poolingList[index];
+         poolingList.RemoveAt(index);
+     }
+     OnActionGet?.Invoke(poolObject);
+     return poolObject;
+ }
+
+ public override void Release(T poolObject)
+ {           
+     OnActionRelease?.Invoke(poolObject);
+     if (freshlyReleashObject == null)
+     {
+         freshlyReleashObject = poolObject;
+         return;
+     }
+
+     poolingList.Add(poolObject);
+ }
+```
+
 
 ---
 
