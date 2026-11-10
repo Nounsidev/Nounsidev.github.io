@@ -74,6 +74,7 @@ Links: [Google Play Store](https://play.google.com/store/apps/details?id=com.Nou
 <video autoplay loop muted playsinline style="max-width: 100%; border-radius: 6px;">
   <source src="/assets/images/Book.mp4" type="video/mp4">
 </video>
+
 <div style="text-align: left; margin: 10px 0;" markdown="1">
   This modular architecture simplifies balance tweaks in the editor, streamlines data management, and ensures the codebase remains clean and scalable as the project expands.
 </div>
