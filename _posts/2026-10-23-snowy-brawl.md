@@ -176,6 +176,7 @@ public class NetworkObjectPooling : NetworkBehaviour
     }
 }
 ```
+<br>
 <div style="text-align: left; margin: 10px 0;" markdown="1">
   Extended Unity's native object pooling architecture to implement a Gradually Object Pool. Rather than pre-allocating a heavy footprint at startup, the pool initializes with a lean baseline and dynamically instantiates additional instances only when required. This balances memory efficiency by preventing early-game bloat while handling systems that scale progressively throughout a session.
 </div>
