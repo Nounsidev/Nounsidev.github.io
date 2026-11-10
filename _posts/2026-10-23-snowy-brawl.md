@@ -59,7 +59,7 @@ Links: [Google Play Store](https://play.google.com/store/apps/details?id=com.Nou
 
 * **Update Manager:**
 <div style="text-align: left; margin: 10px 0;" markdown="1">
-  Engineered a centralized update manager to eliminate performance bottlenecks on memory-constrained mobile devices. By implementing a lightweight <strong>IUpdateObserver</strong> interface (along with <strong>IFixedUpdateObserver</strong> and <strong>ILateUpdateObserver</strong>), scripts register directly to custom tick loops—bypassing Unity's native C# interop overhead for standard <code>Update()</code> calls while enabling control over updating inactive object  or not.
+  Engineered a centralized update manager to eliminate performance bottlenecks on memory-constrained mobile devices. By implementing a lightweight <strong>IUpdateObserver</strong> interface (along with <strong>IFixedUpdateObserver</strong> and <strong>ILateUpdateObserver</strong>), scripts register directly to custom tick loops—bypassing Unity's native C# interop overhead for standard Update() calls while enabling control over updating inactive object  or not.
 </div>
 
 ```csharp
