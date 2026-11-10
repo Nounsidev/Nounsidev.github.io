@@ -66,11 +66,16 @@ Links: [Google Play Store](https://play.google.com/store/apps/details?id=com.Nou
 <div style="margin-left: 0px; width: 100%;">
   <img src="/assets/images/Scriptable Obj.png" alt="Description of the image" style="max-width: 100%; border-radius: 6px;">
 </div>  
+
+<div style="text-align: left; margin: 10px 0;" markdown="1">
+  Decoupled all character and weapon statistics into dedicated ScriptableObjects, establishing a single source of truth for game data.
+</div>
+
 <video autoplay loop muted playsinline style="max-width: 100%; border-radius: 6px;">
   <source src="/assets/images/Book.mp4" type="video/mp4">
 </video>
 <div style="text-align: left; margin: 10px 0;" markdown="1">
-  Decoupled all character and weapon statistics into dedicated ScriptableObjects, establishing a single source of truth for game data. This modular architecture simplifies balance tweaks in the editor, streamlines data management, and ensures the codebase remains clean and scalable as the project expands.
+  This modular architecture simplifies balance tweaks in the editor, streamlines data management, and ensures the codebase remains clean and scalable as the project expands.
 </div>
 ---
 
