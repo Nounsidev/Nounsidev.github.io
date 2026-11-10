@@ -35,7 +35,6 @@ Links: [Google Play Store](https://play.google.com/store/apps/details?id=com.Nou
   All physics-driven movement utilizes delta synchronization to maintain consistent behavior across varying client frame rates while minimizing bandwidth overhead. Conversely, discrete, one-time gameplay actions are routed via client-to-server RPCs; the authoritative server then broadcasts the response to all connected peers. A deliberate network buffer delay is implemented on these actions to balance responsiveness and mitigate host advantage.<br><br>
    Furthermore, player state replication is optimized by synchronizing only the root transform and four key limb rotation variables; through empirical testing, utilizing **half-precision floats (16-bit)** and change-detection thresholds successfully minimized network payload overhead.
 </div>
-
 <br><br>
 ---
 <br><br>
@@ -47,7 +46,6 @@ Links: [Google Play Store](https://play.google.com/store/apps/details?id=com.Nou
 <div style="text-align: left; margin: 10px 0;" markdown="1">
   Both Authentication and Cloud Saving are using UGS ( Unity Gaming Service) - which also provide lobby, player-matching, relay server. Although all the data is read-only for the owner client, it can be configured to be read-only by other clients to support system like Friends and Clan. 
 </div>
-
 <br><br>
 ---
 <br><br>
@@ -59,7 +57,6 @@ Links: [Google Play Store](https://play.google.com/store/apps/details?id=com.Nou
 <div style="text-align: left; margin: 10px 0;" markdown="1">
  Successfully navigated full production lifecycles—spanning internal testing, closed testing, and a public Google Play Store release in December 2025. Integrated a suite of core Google Play APIs, including Play Integrity for security, Google Mobile Ads, Play Games Services, and Analytics to track real-time player telemetry and ensure production stability.
 </div>
-
 <br><br>
 ---
 <br><br>
@@ -102,7 +99,6 @@ public class UpdateManager : MonoBehaviour
   }
 }
 ```
-
 <br><br>
 ---
 <br><br>
@@ -123,7 +119,6 @@ public class UpdateManager : MonoBehaviour
 <div style="text-align: left; margin: 10px 0;" markdown="1">
   This modular architecture simplifies balance tweaks in the editor, streamlines data management, and ensures the codebase remains clean and scalable as the project expands.
 </div>
-
 <br><br>
 ---
 <br><br>
@@ -229,7 +224,6 @@ public class NetworkObjectPooling : NetworkBehaviour
      poolingList.Add(poolObject);
  }
 ```
-
 <br><br>
 ---
 <br><br>
