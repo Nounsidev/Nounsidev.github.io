@@ -5,8 +5,4 @@ permalink: /Cv/
 author_profile: false
 ---
 
-<div style="margin: 20px 0;">
-  <iframe src="/assets/images/CV - ENGLISH.pdf" width="100%" height="600px" style="border: none; border-radius: 6px;">
-    This browser does not support PDFs. Please <a href="/assets/docs/your-file.pdf">download the PDF</a> to view it.
-  </iframe>
-</div>
+[View Full Document (PDF)](/assets/images/CV-ENGLISH.pdf){: .btn .btn--primary target="_blank"}
