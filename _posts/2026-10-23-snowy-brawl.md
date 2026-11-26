@@ -123,7 +123,8 @@ public class UpdateManager : MonoBehaviour
 <div style="text-align: left; margin: 10px 0;" markdown="1">
   This modular architecture simplifies balance tweaks in the editor, streamlines data management, and ensures the codebase remains clean and scalable as the project expands.
 </div>
-<br><br>
+
+<br>
 ---
 <br><br>
 
